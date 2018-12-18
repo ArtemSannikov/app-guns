@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Пистолеты</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/themes/my-theme.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- Open sidebar (left panel) on swipe -->
+	<script type="text/javascript" src="js/swipe-panel.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home" data-theme="a">
+
+	<div data-role="header" data-position="fixed" data-position="inline">
+
+		<a href="#left-panel" data-role="button" data-icon="bars" data-iconpos="notext" data-shadow="false" data-transition="none" data-ajax="true" data-iconpos="right" class="ui-nodisc-icon transparentButton">Меню</a>
+
+		<h1>Страны</h1>
+
+	</div>
+
+	<!-- Выезжающая панель слева -->
+	<div data-role="panel" id="left-panel" data-display="overlay" data-position="left" data-position-fixed="true">
+
+		<ul data-role="listview">
+
+			<li data-icon="delete" class=""><a data-rel="close">Закрыть панель</a></li>
+
+			<li data-icon="false">
+				<a href="content/main/about.html" data-ajax="false" data-transition="none">О приложении</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/main/contact.html" data-ajax="false" data-transition="none">Контактная информация</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="#PopupReviewApp" data-rel="popup" data-position-to="window" data-transition="none">Оставить отзыв</a>
+			</li>
+		</ul>	
+
+	</div>
+
+	<!-- Всплывающее окно: Оставить отзыв -->
+	<div data-role="popup" id="PopupReviewApp" data-overlay-theme="a" data-theme="a" data-dismissible="false">
+
+		<div data-role="header" data-theme="a">
+			<h1>Редирект</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<h3 class="ui-title">Переход на Play Market</h3>
+			<p>Сейчас вы будете перенаправлены на страницу приложения в Play Market, где сможете оставить отзыв о приложении.</p>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Отмена</a>
+			<a href="https://play.google.com/store/apps/details?id=ru.guns" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" rel="external" data-transition="none">Перейти</a>
+		</div>
+
+	</div>
+
+	<!-- Контент -->
+	<div data-role="main" class="ui-content">
+
+		<ul data-role="listview" data-inset="false">
+
+			<li data-icon="false">
+				<h2>Приложение находится на стадии наполнения.</h2>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/austria/list.html" data-transition="none" data-ajax="false">
+					<h2>Австрия</h2>
+				</a>
+			</li>
+
+			<!--<li data-icon="carat-r">
+				<a href="content/argentina/list.html" data-transition="none" data-ajax="false">
+					<h2>Аргентина</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/belgium/list.html" data-transition="none" data-ajax="false">
+					<h2>Бельгия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/britain/list.html" data-transition="none" data-ajax="false">
+					<h2>Великобритания</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/hungary/list.html" data-transition="none" data-ajax="false">
+					<h2>Венгрия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/germany/list.html" data-transition="none" data-ajax="false">
+					<h2>Германия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/denmark/list.html" data-transition="none" data-ajax="false">
+					<h2>Дания</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/spain/list.html" data-transition="none" data-ajax="false">
+					<h2>Испания</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/italy/list.html" data-transition="none" data-ajax="false">
+					<h2>Италия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/china/list.html" data-transition="none" data-ajax="false">
+					<h2>Китайская Народная Республика</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/united-arab-emirates/list.html" data-transition="none" data-ajax="false">
+					<h2>Объединённые Арабские Эмираты</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/poland/list.html" data-transition="none" data-ajax="false">
+					<h2>Польша</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/russia/list.html" data-transition="none" data-ajax="false">
+					<h2>Россия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/serbia/list.html" data-transition="none" data-ajax="false">
+					<h2>Сербия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/slovakia/list.html" data-transition="none" data-ajax="false">
+					<h2>Словакия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/usa/list.html" data-transition="none" data-ajax="false">
+					<h2>Соединённые Штаты Америки</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/ukraine/list.html" data-transition="none" data-ajax="false">
+					<h2>Украина</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/finland/list.html" data-transition="none" data-ajax="false">
+					<h2>Финляндия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/france/list.html" data-transition="none" data-ajax="false">
+					<h2>Франция</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/croatia/list.html" data-transition="none" data-ajax="false">
+					<h2>Хорватия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/czechia/list.html" data-transition="none" data-ajax="false">
+					<h2>Чехия</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/switzerland/list.html" data-transition="none" data-ajax="false">
+					<h2>Швейцария</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/sweden/list.html" data-transition="none" data-ajax="false">
+					<h2>Швеция</h2>
+				</a>
+			</li>
+
+			<li data-icon="carat-r">
+				<a href="content/japan/list.html" data-transition="none" data-ajax="false">
+					<h2>Япония</h2>
+				</a>
+			</li>-->
+
+		</ul>
+
+	</div>
+
+</div>
+
+</body>
+</html>
